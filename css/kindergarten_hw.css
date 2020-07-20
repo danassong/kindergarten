@@ -1,0 +1,782 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: 'noto sans', '맑은 고딕';
+}
+
+ul { list-style: none;}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cf:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.blind {
+    width: 0;
+    height: 0;
+    position: absolute;
+    text-indent: -9999px;
+    font-size: 0px;
+    overflow: hidden;
+}
+
+.row {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: none;
+}
+
+.topwrap {
+    background: #F76F6F;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0; left: 0;
+    background: #fff;
+    box-shadow: 0 1px 3px #ddd;
+    z-index: 999;
+}
+
+.top {
+    position: relative;
+}
+
+.top .topsns {
+    padding: 10px 0;
+}
+
+.top .topmenu {
+    position: absolute;
+    font-size: 11px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.topsns a {
+    padding-right: 10px;
+    font-size: 12.2px;
+}
+
+.topsns a:first-child span {
+    font-size: 11px;
+}
+
+.topmenu a {
+    padding-left: 10px;
+}
+
+.top a:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: all 0.5s;
+}
+
+.logonav {
+    position: relative;
+    height: 76.22px;
+    letter-spacing: -1px;
+
+}
+
+.logonav h1{
+    font-size: 26.25px;
+    color:#ffae3d;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logonav h1:hover {
+    color: #FFD23C;
+    transition: all 0.5s;
+}
+
+.logonav .nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.logonav .nav .depth1 > li {
+    position: relative;
+    float: left;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 15.75px;
+    line-height: 76px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    padding-left: 30px;
+    /* padding: 11.8125px 0 11.8125px 13px; */
+}
+
+/* css에서 웹폰트아이콘 넣는 방법 */
+.logonav .nav .depth1 > li > a:after {
+    content: '\f107';
+    font-family: 'font awesome 5 free';
+    font-weight: 900 !important;
+    color: #ddd;
+    padding-left: 10px;
+}
+
+.logonav .nav .depth1 > li:first-child > a:after, li:nth-child(5) > a:after {
+    visibility: hidden;
+}
+
+.logonav .nav .depth1 > li > a:hover {
+    color: #ffd23c;
+    transition: all 0.5s;
+}
+
+.logonav .nav .depth1 > li .active {
+    color: #ffd23c;
+}
+
+.logonav .nav .depth2 {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    width: 168px;
+    color:#ffae3d;
+    border-radius: 5px;
+    padding: 0 12px;
+    background: #fff;
+    box-shadow: 0px 0px 10px #bbb;
+    display: none;
+}
+
+.logonav .nav .depth2:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+/* 메뉴 보이기->js아니어도 css에서 할수 있음 */
+.logonav .depth1 > li:hover .depth2 {
+    display: block;
+}
+
+.logonav .nav .depth2 > li {
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.logonav .nav .depth2 a:hover {
+    color:#ffd23c;
+    transition: 0.5s;
+}
+
+
+
+
+
+/* section part */
+#section {
+    padding-top: 116.22px;
+}
+
+.slide {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.slideouter {
+    position: relative;
+}
+
+.slide .slideinner:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.slide .slideinner {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    position: relative;
+    background-position: center 70%;
+}
+
+.slide .slideinner:nth-child(1) {
+    background-image: url(../images/main-cover_1.jpg);
+}
+
+.slide .slideinner:nth-child(2) {
+    background-image: url(../images/main-cover_2.jpg);
+}
+
+.slide .text {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: -1.2px;
+}
+
+.slide .text h2 {
+    font-size: 70px;
+    font-weight: 500;
+    text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.slide .text p {
+    font-size: 19.25px;
+    text-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+.slide .text span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.slide .slideinner .text .btn1 {
+    width: 120px;
+    height: 52px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 14px 28px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.slide .slideinner .text .btn2 {
+    width: 90px;
+    height: 52px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+    padding: 14px 28px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.slide .text .btn1:hover {
+    background-color: #FFD23C;
+    transition: all 0.5s;
+}
+
+.slide .text .btn2:hover {
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.slideouter {
+    position: relative;
+}
+
+.slideouter .dotbox {
+    position: absolute;
+    bottom: 13.5%;
+    left: 97.5%;
+}
+
+.slideouter .dotbox a {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.slideouter .dotbox a.active {
+    background: rgba(0, 0, 0, 0);
+    border: 2px solid #80cee7;
+}
+
+/* section 본문 내용 */
+#section .act, .class, .review {
+    padding: 84px 0;
+}
+
+#section .title {
+    text-align: center;
+    /* border-bottom: 1px solid #f77070;  */
+}
+
+#section .title h3 {
+    font-size: 28px;
+    margin: 20px 0 10px;
+    font-weight: bold;
+    letter-spacing: -2px;
+}
+
+#section .title p > span {
+    font-weight: 800;
+}
+
+#section .title p {
+    margin-bottom: 56px;
+    font-size: 14px;
+    padding-bottom: 25px;
+    position: relative;
+}
+
+#section .title p::after{
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: #f77070;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.act ul li {
+    float: left;
+    width: 24%;
+    height: 185px;
+    box-sizing: border-box;
+    background-size: auto;
+    background-repeat: no-repeat;
+    margin: 0 0.5%;
+    position: relative;
+}
+
+.act ul li div{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+    color: #f8f9fa;
+}
+
+.act li div > h4 {
+    font-size: 19.25px;
+    margin: 10px 0;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.act li div > p {
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.act li div > a {
+    font-size: 10.5px;
+    margin: 0 0 10px;
+    padding: 5px 20px;
+    border: 1px solid #f8f9fa;
+    letter-spacing: 2px;
+}
+
+.act li div > a:hover {
+    color: #212529;
+    background-color: #f8f9fa;
+    transition: all 0.5s;
+}
+
+.act ul li:nth-child(1) {
+    background-image: url(../images/main-business1.min.jpg);
+}
+
+.act ul li:nth-child(1)::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(48, 120, 210, 0.5);
+}
+
+.act ul li:nth-child(2) {
+    background-image: url(../images/main-business2.min.jpg);
+}
+
+.act ul li:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 174, 61, 0.6);
+}
+
+.act ul li:nth-child(3) {
+    background-image: url(../images/main-business3.min.jpg);
+}
+
+.act ul li:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(48, 205, 210, 0.5);
+}
+
+.act ul li:nth-child(4) {
+    background-image: url(../images/main-business4.min.jpg);
+}
+
+.act ul li:nth-child(4)::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(247, 111, 111, 0.5);
+}
+
+.curri {
+    padding: 84px 0;
+}
+
+.curribox > .column {
+    float: left;
+    width: 31.66%;
+}
+
+.curribox > .column:nth-child(2) {
+    margin: 0 2.5%;
+}
+
+.curribox > .column:first-child > div:first-child,
+.curribox > .column:last-child > div:first-child {
+    margin-bottom: 15px;
+}
+
+.curribox > .column > div {
+    position: relative;
+}
+
+.curribox .overlay {
+    position: absolute;
+    overflow: hidden;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right bottom, #ffd23c, #ffae3d);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.curribox .column > div:hover .overlay {
+    opacity: 0.8;
+}
+
+.curribox .copy {
+    position: absolute;
+    bottom: -10px; left: 20px; right: 20px;
+    color: white;
+    transition: 0.5s;
+}
+
+.curribox .column > div:hover .copy {
+    bottom: 10px;
+}
+
+.curribox .copy h3 {
+    font-size: 24.5px;
+    font-weight: 800;
+}
+
+.curribox .copy p {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* review */
+.review {
+    background: #fdeace;
+}
+
+.review ul li {
+    float: left;
+    width: 31.66%;
+}
+
+.review ul li:nth-child(2) {
+    margin: 0 2.5%;
+}
+
+.review ul li > div {
+    position: relative;
+}
+
+.review .quote {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    background: #ffae3d;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 56px;
+    top: -28px; left: 10px;
+    z-index: 10;
+}
+
+.review .blockquote {
+    position: relative;
+    background: #fff;
+    font-size: 17.5px;
+    padding: 40px;
+    border-radius: 4px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.review .blockquote:after {
+    content: '';
+    position: absolute;
+    top: 100%; left: 40px;
+    border-top: 15px solid #fff;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+.review .client {
+    margin-left: 20px;
+    line-height: 20px;
+}
+
+.review .client p {
+    color: #ffae3d;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.review .client p a {
+    color: #f76f6f;
+}
+
+.review .client p a:hover {
+    color: #ffd23d;
+}
+
+.review .client p span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+/* slogun */
+.slogun {
+    position: relative;
+    background: url(../images/main-bottomBanner.min.jpg);
+    height: 160px;
+    background-position: center 100%;
+    background-attachment: fixed;
+    font-size: 19.25px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.slogun:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.slogun .row {
+    position: relative;
+    line-height: 160px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+/* csinfo */
+.csinfo {
+    background: #f5f5f5;
+    padding: 84px 0;
+    color: #333;
+}
+
+.csinfo > .row > div {
+    float: left;
+    width: 31.66%;
+}
+
+.csinfo > .row > div:nth-child(2) {
+    margin: 0 2.5%;
+}
+
+.csinfo h2 {
+    font-size: 21px;
+    color: #222;
+    font-weight: bold;
+    letter-spacing: -1px;
+    border-bottom: 2px solid #383d41;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.csinfo .cscenter p:nth-child(1),
+.csinfo .cscenter p:nth-child(2) {
+    font-size: 19.25px;
+    font-weight: bold;
+}
+
+.csinfo .cscenter p:nth-child(3),
+.csinfo .cscenter p:nth-child(4) {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.csinfo .consult {
+    font-size: 14px;
+}
+
+.csinfo .consult p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.csinfo .consult a {
+    display: block;
+    letter-spacing: 1px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    width: 130px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-radius: 5px;
+}
+
+.csinfo .consult a:hover {
+    background: #ffd23d;
+    transition: 0.5s;
+}
+
+.csinfo .row > div:nth-child(3) {
+    position: relative;
+}
+
+.csinfo .row > div:nth-child(3) .more  {
+    position: absolute;
+    right: 0; top: 10%;
+    font-size: 12px;
+    font-weight: 800;
+    color: #f76f6f;
+}
+
+.csinfo .notice li {
+    padding: 2px;
+}
+
+.csinfo .notice a {
+    font-size: 14px;
+}
+
+.csinfo .notice a:before {
+    content: '·';
+    padding-right: 5px;
+    color: #888;
+}
+
+.csinfo .notice a:after {
+    content: 'NEW';
+    color: #ffd23c;
+    font-size: 10px;
+    font-weight: 800;
+    padding-left: 10px;
+}
+
+/* footer */
+#footer {
+    font-size: 12.25px;
+    text-align: center;
+}
+
+.footerinfo {
+    background: #eee;
+    height: 38px;
+    color: #333;
+    padding: 10px;
+}
+
+.footerinfo a {
+    padding: 0 5px;
+}
+
+.footerinfo a:before {
+    content: '|';
+    padding-right: 10px;
+    position: relative;
+    top: -1px;
+}
+
+.footerinfo a:first-child:before {
+    display: none;
+}
+
+.cominfo {
+    background: #222;
+    color:rgba(255, 255, 255, 0.5);
+    height: 129.2px;
+    padding: 40px 0;
+}
+
+.cominfo .sns {
+    padding-bottom: 10px;
+}
+
+.cominfo .sns a {
+    font-size: 20.8px;
+    padding: 4px 10px;
+}
+
+.info span {
+    padding: 0 3px;
+}
+
+.info span:before {
+    content: '|';
+    padding-right: 6px;
+    position: relative;
+    top: -1.5px;
+}
+
+.info span:first-child::before {
+    display: none;
+}
+
+.copyright {
+    background: #0a0a0a;
+    color: #333;
+    padding: 10px 0;
+    font-size: 10.5px;
+}
