@@ -71,7 +71,7 @@ label {
     height: 45px;
     border: 1px solid #ccc;
     padding: 0 1em;
-    vertical-align: top;
+    /* vertical-align: top; */
 }
 .joinform .w320 {
     width: 320px;
@@ -128,4 +128,8 @@ label {
 }
 .joinform .btn input[type=submit] {
     background: red;
+}
+
+.joinform .birthday_area input {
+    padding: 0 5px;
 }
