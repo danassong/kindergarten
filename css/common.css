@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+.row {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+.skip a {
+    display: block;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    /* padding: 10px 0; */
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: -100px;
+}
+.skip a:focus {
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    /* position: static; */
+    position: fixed;
+    top: 0;
+    z-index: 9999999999;
+}
+
+
+#header {
+    position: fixed;
+    /* skip을 위해 바꿔줌 */
+    /* position: relative; */
+    width: 100%;
+    top: 0; left: 0;
+    background: #fff;
+    box-shadow: 0 1px 3px #ddd;
+    z-index: 999;
+}
+
+.topwrap {
+    background: #F76F6F;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.top {
+    position: relative;
+}
+
+.top .topsns {
+    padding: 10px 0;
+}
+
+.top .topmenu {
+    position: absolute;
+    font-size: 11px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.topsns a {
+    padding-right: 10px;
+    font-size: 12.2px;
+}
+
+.topsns a:first-child span {
+    font-size: 11px;
+}
+
+.topmenu a {
+    padding-left: 10px;
+}
+
+.top a:hover {
+    color: rgba(255, 255, 255, 1);
+    transition: all 0.5s;
+}
+
+.logonav {
+    position: relative;
+    height: 76.22px;
+    letter-spacing: -1px;
+
+}
+
+.logonav h1{
+    font-size: 26.25px;
+    color:#ffae3d;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logonav h1:hover {
+    color: #FFD23C;
+    transition: all 0.5s;
+}
+
+.logonav .nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.logonav .nav .depth1 > li {
+    position: relative;
+    float: left;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 15.75px;
+    line-height: 76px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    padding-left: 30px;
+    /* padding: 11.8125px 0 11.8125px 13px; */
+}
+
+/* css에서 웹폰트아이콘 넣는 방법 */
+.logonav .nav .depth1 > li > a:after {
+    content: '\f107';
+    font-family: 'font awesome 5 free';
+    font-weight: 900 !important;
+    color: #ddd;
+    padding-left: 10px;
+}
+
+.logonav .nav .depth1 > li:first-child > a:after, li:nth-child(5) > a:after {
+    visibility: hidden;
+}
+
+.logonav .nav .depth1 > li > a:hover {
+    color: #ffd23c;
+    transition: all 0.5s;
+}
+
+.logonav .nav .depth1 > li .active {
+    color: #ffd23c;
+}
+
+.logonav .nav .depth2 {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    width: 168px;
+    color:#ffae3d;
+    border-radius: 5px;
+    padding: 0 12px;
+    background: #fff;
+    box-shadow: 0px 0px 10px #bbb;
+    display: none;
+}
+
+.logonav .nav .depth2:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+/* 메뉴 보이기->js아니어도 css에서 할수 있음 */
+.logonav .depth1 > li:hover .depth2 {
+    display: block;
+}
+
+.logonav .nav .depth2 > li {
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.logonav .nav .depth2 a:hover {
+    color:#ffd23c;
+    transition: 0.5s;
+}
+
+
+/* footer */
+#footer {
+    font-size: 12.25px;
+    text-align: center;
+}
+
+.footerinfo {
+    background: #eee;
+    height: 38px;
+    color: #333;
+    padding: 10px;
+}
+
+.footerinfo a {
+    padding: 0 5px;
+}
+
+.footerinfo a:before {
+    content: '|';
+    padding-right: 10px;
+    position: relative;
+    top: -1px;
+}
+
+.footerinfo a:first-child:before {
+    display: none;
+}
+
+.cominfo {
+    background: #222;
+    color:rgba(255, 255, 255, 0.5);
+    height: 129.2px;
+    padding: 40px 0;
+}
+
+.cominfo .sns {
+    padding-bottom: 10px;
+}
+
+.cominfo .sns a {
+    font-size: 20.8px;
+    padding: 4px 10px;
+}
+
+.info span {
+    padding: 0 3px;
+}
+
+.info span:before {
+    content: '|';
+    padding-right: 6px;
+    position: relative;
+    top: -1.5px;
+}
+
+.info span:first-child::before {
+    display: none;
+}
+
+.copyright {
+    background: #0a0a0a;
+    color: #333;
+    padding: 10px 0;
+    font-size: 10.5px;
+}
