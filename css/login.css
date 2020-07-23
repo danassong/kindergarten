@@ -12,7 +12,7 @@
     letter-spacing: 5px;
 }
 #loginpage .comment {
-    line-height: 1.5;
+    font-size: 14px;
 }
 #loginpage .login_cont{
     padding: 150px 0;

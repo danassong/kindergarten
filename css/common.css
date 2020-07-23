@@ -58,6 +58,24 @@
     top: 50%;
     transform: translateY(-50%);
 }
+.top {
+    position: relative;
+}
+
+.top .search_box {
+    top: 6px; left: 180px;
+    position: absolute;
+    opacity: 0.9;
+}
+.top .search_box fieldset {
+    background: #fff;
+    padding: 3px 0.5em;
+}
+.top .search_box fieldset input,
+.top .search_box fieldset i {
+    border: none;
+}
+
 
 .topsns a {
     padding-right: 10px;

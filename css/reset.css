@@ -31,3 +31,8 @@ header, footer, section, article, aside, nav, main, figure { display: block; }
 .skip a:focus { width: 100%; height: auto; padding: 10px 0;}
 fieldset { border: none;}
 legend { display: none;}
+button, input[type=submit], input[type=reset] {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
