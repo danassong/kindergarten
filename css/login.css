@@ -50,5 +50,10 @@
 }
 #loginpage .login_form .check {
     margin: 20px 370px 20px;
-    text-align: left;
+    text-align: center;
+}
+#loginpage .login_cont .check label {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #666;
 }
