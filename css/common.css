@@ -63,7 +63,8 @@
 }
 
 .top .search_box {
-    top: 6px; left: 180px;
+    top: 6px; right: 50%;
+    transform: translate(50%);
     position: absolute;
     opacity: 0.9;
 }
@@ -106,9 +107,10 @@
     font-size: 26.25px;
     color:#ffae3d;
     font-weight: 700;
-    position: absolute;
+    padding: 18px;
+    /* position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); */
 }
 
 .logonav h1:hover {
@@ -116,23 +118,39 @@
     transition: all 0.5s;
 }
 
+.logonav .open_nav,
+.logonav .close_nav {
+    display: none;
+}
+
+
 .logonav .nav {
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 9999;
+    background: #fff;
+    /* z-index: 9999; */
 }
 
 .logonav .nav .depth1 > li {
+    display: inline-block;
     position: relative;
-    float: left;
+    /* float: left; */
     color: rgba(0, 0, 0, 0.9);
     font-size: 15.75px;
-    line-height: 76px;
+    /* line-height: 76px; */
     font-weight: 800;
     letter-spacing: -1px;
     padding-left: 30px;
     /* padding: 11.8125px 0 11.8125px 13px; */
+}
+.logonav .nav .depth1 > li > a {
+    display: inline-block;
+    padding: 28px 0 22px;
+}
+
+.logonav .nav .depth1 > li > a:first-child {
+    padding-left: 0;
 }
 
 /* css에서 웹폰트아이콘 넣는 방법 */
