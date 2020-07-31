@@ -74,6 +74,37 @@ label {
     padding: 0 1em;
     /* vertical-align: top; */
 }
+.joinform .info_content select {
+    appearance: none;
+    background: transparent;
+    position: relative;
+    z-index: 9999;
+}
+
+.joinform .info_content select::-ms-expand {
+    display: none;
+}
+
+.joinform .info_content .email_box {
+    position: relative;
+}
+
+.joinform .info_content .email_box:after {
+    content: '\f0dd';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: palevioletred;
+    display: inline-block;
+    transform: translate(-30px, 5px);
+    /* position: relative;
+    z-index: 9999; */
+    /* position: relative;
+    top: 5px; right: 20px; */
+    /* position: absolute;
+    top: 10%; right: 25%; */
+}
+
+
 .joinform .w320 {
     width: 320px;
 }
@@ -97,12 +128,105 @@ label {
     cursor: pointer;
     background: #ddd;
 }
-.joinform .gender_area label,
+.joinform .gender_area label {
+    line-height: 45px;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+/* .joinform .gender_area label:before {
+    content: '\f058';
+    font-family:'Font Awesome 5 Free';
+    font-weight:400;
+    padding-right: 10px;
+    color: #ddd;
+    display: inline-block;
+}
+
+.joinform .gender_area input[type=radio]:checked + label:before {
+    font-weight:900;
+    padding-right: 10px;
+    color: palevioletred;
+} */
+
+.joinform .gender_area label:before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/sprite_img.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: -296px -258px;
+    position: relative;
+    top: 4px;
+}
+
+.joinform .gender_area input[type=radio]:checked + label:before {
+    background-position: -296px -186px;
+}
+
 .joinform .hobby_area label {
     line-height: 45px;
     padding-right: 15px;
     vertical-align: middle;
 }
+
+/* .joinform .hobby_area label:before {
+    content: '\f0c8';
+    font-family:'Font Awesome 5 Free';
+    font-weight:400;
+    padding-right: 10px;
+    color: #ddd;
+    display: inline-block;
+}
+
+.joinform .hobby_area input[type=checkbox]:checked + label:before {
+    content: '\f14a';
+    font-weight:900;
+    padding-right: 10px;
+    color: palevioletred;
+    display: inline-block;
+    transform: scale(1.5);
+} */
+
+.joinform .hobby_area label:before {
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../images/sprite_img.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: -296px -114px;
+    position: relative;
+    top: 4px;
+}
+
+.joinform .hobby_area input[type=checkbox]:checked + label:before {
+    background-position: -138px -182px;
+}
+
+
+
+
+
+
+.joinform .gender_area input[type=radio] {
+    display: none;
+    transform: scale(1.5);
+}
+
+.joinform .hobby_area input[type=checkbox] {
+    display: none;
+    transform: scale(1.5);
+}
+
+
+
+
 .joinform .info_content textarea {
     width: 70%;
     height: 245px;
@@ -134,3 +258,4 @@ label {
 .joinform .birthday_area input {
     padding: 0 5px;
 }
+
